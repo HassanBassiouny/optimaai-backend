@@ -1,0 +1,19 @@
+{
+  "strategy": "forward_holdout",
+  "confidence": "high",
+  "definition": "A customer is labelled 'churned' if they had at least one order before 2023-09-01 and made no orders during the 121-day observation window from 2023-09-01 to 2023-12-31. One-time buyers and customers acquired too recently to observe a full holdout window are excluded from the trained population.",
+  "data_span_days": 729,
+  "total_customers": 10842,
+  "one_time_buyers": 2312,
+  "repeat_customers": 8530,
+  "new_customers": 398,
+  "eligible_customers": 8132,
+  "churned_customers": 4141,
+  "churn_rate_pct": 50.92,
+  "cutoff_date": "2023-09-01",
+  "holdout_window_days": 121,
+  "median_ipi_days": null,
+  "threshold_multiplier": null,
+  "threshold_max_days": null,
+  "warnings": []
+}

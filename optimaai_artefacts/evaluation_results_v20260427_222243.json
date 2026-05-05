@@ -1,0 +1,294 @@
+{
+    "revenue_model": {
+        "RMSE": 205.0971,
+        "MAE": 90.2856,
+        "MAPE_pct": 74.02,
+        "sMAPE_pct": 22.57,
+        "R2": 0.849318,
+        "forecast_bias": -4.8533,
+        "target": "net_revenue (after refunds)",
+        "train_rows": 40000,
+        "test_rows": 10000,
+        "features_used": 22,
+        "12_period_forecast": [
+            775.47,
+            665.35,
+            664.87,
+            671.56,
+            677.92,
+            686.94,
+            694.69,
+            694.02,
+            691.34,
+            684.53,
+            686.79,
+            699.11
+        ],
+        "top_features": [
+            {
+                "feature": "quantity_sold",
+                "importance": "0.3974"
+            },
+            {
+                "feature": "discounted_price",
+                "importance": "0.368"
+            },
+            {
+                "feature": "price",
+                "importance": "0.0225"
+            },
+            {
+                "feature": "discount_percent",
+                "importance": "0.0174"
+            },
+            {
+                "feature": "seasonal_index",
+                "importance": "0.0156"
+            },
+            {
+                "feature": "is_weekend",
+                "importance": "0.0137"
+            },
+            {
+                "feature": "revenue_roll_7d",
+                "importance": "0.0128"
+            },
+            {
+                "feature": "orders_roll_7d",
+                "importance": "0.0117"
+            },
+            {
+                "feature": "rating",
+                "importance": "0.0114"
+            },
+            {
+                "feature": "review_count",
+                "importance": "0.0114"
+            }
+        ],
+        "data_profile": {
+            "strategy": "acceptable",
+            "confidence": "high",
+            "definition": "This dataset spans 729 days (2022-01-01 to 2023-12-31) with 50,000 transactions and $30,586,355 total revenue. Order sizes have a coefficient of variation of 0.87, meaning per-transaction predictions are naturally noisy. The model is best used at the 'monthly' aggregation grain for executive reporting; per-row predictions remain valid for relative ranking but should not be quoted as absolute order values.",
+            "suitable_for": [
+                "Monthly aggregate revenue forecasting (use the aggregator helper)",
+                "Identifying revenue drivers via feature importance",
+                "Detecting seasonality and trend changes over time"
+            ],
+            "not_suitable_for": [
+                "Quoting individual order values precisely (CoV=0.87 \u2192 noisy at row level)",
+                "Forecasting categories or regions absent from the training data"
+            ],
+            "data_span_days": 729,
+            "first_date": "2022-01-01",
+            "last_date": "2023-12-31",
+            "total_transactions": 50000,
+            "total_revenue": 30586355.44,
+            "days_with_data": 730,
+            "coverage_pct": 100.0,
+            "avg_transactions_per_day": 68.49,
+            "avg_revenue_per_day": 41899.12,
+            "transaction_p10": 63.81,
+            "transaction_p50": 445.5,
+            "transaction_p90": 1409.96,
+            "transaction_p99": 2127.4,
+            "transaction_max": 2499.55,
+            "coefficient_of_variation": 0.8672,
+            "recommended_aggregation": "monthly",
+            "monthly_periods_available": 24,
+            "weekly_periods_available": 105,
+            "train_test_split_ratio": 0.8,
+            "warnings": []
+        }
+    },
+    "churn_model": {
+        "ROC_AUC": 0.8446,
+        "F1_Score": 0.7668,
+        "Precision": 0.7288,
+        "Recall": 0.8089,
+        "churn_rate_pct": 50.92,
+        "train_rows": 6505,
+        "test_rows": 1627,
+        "features_used": 6,
+        "top_features": [
+            {
+                "feature": "customer_tenure_days",
+                "importance": "0.4983"
+            },
+            {
+                "feature": "unique_categories",
+                "importance": "0.1934"
+            },
+            {
+                "feature": "avg_days_between_orders",
+                "importance": "0.0888"
+            },
+            {
+                "feature": "total_orders",
+                "importance": "0.0809"
+            },
+            {
+                "feature": "total_spent",
+                "importance": "0.073"
+            },
+            {
+                "feature": "avg_order_value",
+                "importance": "0.0655"
+            }
+        ],
+        "labelling": {
+            "strategy": "forward_holdout",
+            "confidence": "high",
+            "definition": "A customer is labelled 'churned' if they had at least one order before 2023-09-01 and made no orders during the 121-day observation window from 2023-09-01 to 2023-12-31. One-time buyers and customers acquired too recently to observe a full holdout window are excluded from the trained population.",
+            "data_span_days": 729,
+            "total_customers": 10842,
+            "one_time_buyers": 2312,
+            "repeat_customers": 8530,
+            "new_customers": 398,
+            "eligible_customers": 8132,
+            "churned_customers": 4141,
+            "churn_rate_pct": 50.92,
+            "cutoff_date": "2023-09-01",
+            "holdout_window_days": 121,
+            "median_ipi_days": null,
+            "threshold_multiplier": null,
+            "threshold_max_days": null,
+            "warnings": []
+        }
+    },
+    "growth_model": {
+        "RMSE": 24480.48,
+        "MAE": 22518.88,
+        "MAPE_pct": 1.78,
+        "R2": 0.886,
+        "target": "revenue_3m_forecast (absolute $)",
+        "train_months": 20,
+        "test_months": 4,
+        "features_used": 11,
+        "forecast_horizon_months": 6,
+        "forecast": [
+            {
+                "period": "2024-01",
+                "forecast": 1244215.5
+            },
+            {
+                "period": "2024-02",
+                "forecast": 1212873.0
+            },
+            {
+                "period": "2024-03",
+                "forecast": 1220882.25
+            },
+            {
+                "period": "2024-04",
+                "forecast": 1227085.75
+            },
+            {
+                "period": "2024-05",
+                "forecast": 1221997.0
+            },
+            {
+                "period": "2024-06",
+                "forecast": 1239808.25
+            }
+        ],
+        "12_month_forecast": [
+            {
+                "period": "2024-01",
+                "forecast": 1244215.5
+            },
+            {
+                "period": "2024-02",
+                "forecast": 1212873.0
+            },
+            {
+                "period": "2024-03",
+                "forecast": 1220882.25
+            },
+            {
+                "period": "2024-04",
+                "forecast": 1227085.75
+            },
+            {
+                "period": "2024-05",
+                "forecast": 1221997.0
+            },
+            {
+                "period": "2024-06",
+                "forecast": 1239808.25
+            }
+        ],
+        "top_features": [
+            {
+                "feature": "new_customers",
+                "importance": "0.4828"
+            },
+            {
+                "feature": "monthly_orders",
+                "importance": "0.1266"
+            },
+            {
+                "feature": "month_num",
+                "importance": "0.1134"
+            },
+            {
+                "feature": "sin_m",
+                "importance": "0.0943"
+            },
+            {
+                "feature": "lag_1_rev",
+                "importance": "0.0623"
+            },
+            {
+                "feature": "lag_3_rev",
+                "importance": "0.0513"
+            },
+            {
+                "feature": "avg_order_value",
+                "importance": "0.029"
+            },
+            {
+                "feature": "cos_m",
+                "importance": "0.027"
+            },
+            {
+                "feature": "lag_12_rev",
+                "importance": "0.0072"
+            },
+            {
+                "feature": "lag_2_rev",
+                "importance": "0.0057"
+            }
+        ],
+        "data_profile": {
+            "strategy": "full_forecasting",
+            "confidence": "medium",
+            "definition": "This dataset has 24 months of history (2022-01 to 2023-12), enough for full forecasting with year-over-year comparisons. Recommended split: 20 months for training, 4 for test. Forecasts up to 6 months ahead are defensible; beyond that the model would be extrapolating.",
+            "suitable_for": [
+                "Forecasting up to 6 months ahead",
+                "Year-over-year growth claims",
+                "Seasonal pattern identification",
+                "Budget and capacity planning conversations"
+            ],
+            "not_suitable_for": [
+                "Forecasts beyond 6 months (extrapolation, not prediction)",
+                "Hiring or contract commitments without human review"
+            ],
+            "months_of_history": 24,
+            "months_with_revenue": 24,
+            "months_zero_or_missing": 0,
+            "first_period": "2022-01",
+            "last_period": "2023-12",
+            "total_revenue": 30586355.44,
+            "median_monthly_revenue": 1270712.54,
+            "min_monthly_revenue": 1152602.69,
+            "max_monthly_revenue": 1363968.22,
+            "has_full_seasonal_cycle": true,
+            "has_yoy_capability": true,
+            "safe_horizon_months": 6,
+            "recommended_train_months": 20,
+            "recommended_test_months": 4,
+            "warnings": []
+        }
+    }
+}

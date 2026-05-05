@@ -1,0 +1,230 @@
+{
+    "revenue_model": {
+        "RMSE": 205.0971,
+        "MAE": 90.2856,
+        "MAPE_pct": 74.02,
+        "sMAPE_pct": 22.57,
+        "R2": 0.849318,
+        "forecast_bias": -4.8533,
+        "target": "net_revenue (after refunds)",
+        "train_rows": 40000,
+        "test_rows": 10000,
+        "features_used": 22,
+        "12_period_forecast": [
+            775.47,
+            665.35,
+            664.87,
+            671.56,
+            677.92,
+            686.94,
+            694.69,
+            694.02,
+            691.34,
+            684.53,
+            686.79,
+            699.11
+        ],
+        "top_features": [
+            {
+                "feature": "quantity_sold",
+                "importance": "0.3974"
+            },
+            {
+                "feature": "discounted_price",
+                "importance": "0.368"
+            },
+            {
+                "feature": "price",
+                "importance": "0.0225"
+            },
+            {
+                "feature": "discount_percent",
+                "importance": "0.0174"
+            },
+            {
+                "feature": "seasonal_index",
+                "importance": "0.0156"
+            },
+            {
+                "feature": "is_weekend",
+                "importance": "0.0137"
+            },
+            {
+                "feature": "revenue_roll_7d",
+                "importance": "0.0128"
+            },
+            {
+                "feature": "orders_roll_7d",
+                "importance": "0.0117"
+            },
+            {
+                "feature": "rating",
+                "importance": "0.0114"
+            },
+            {
+                "feature": "review_count",
+                "importance": "0.0114"
+            }
+        ],
+        "data_profile": null
+    },
+    "churn_model": {
+        "ROC_AUC": 0.8199,
+        "F1_Score": 0.7712,
+        "Precision": 0.8243,
+        "Recall": 0.7246,
+        "churn_rate_pct": 65.21,
+        "train_rows": 8673,
+        "test_rows": 2169,
+        "features_used": 13,
+        "top_features": [
+            {
+                "feature": "total_orders",
+                "importance": "0.3609"
+            },
+            {
+                "feature": "avg_days_between_orders",
+                "importance": "0.1892"
+            },
+            {
+                "feature": "predicted_clv",
+                "importance": "0.075"
+            },
+            {
+                "feature": "unique_categories",
+                "importance": "0.0744"
+            },
+            {
+                "feature": "customer_tenure_days",
+                "importance": "0.0508"
+            },
+            {
+                "feature": "spend_per_day",
+                "importance": "0.0369"
+            },
+            {
+                "feature": "total_items",
+                "importance": "0.0339"
+            },
+            {
+                "feature": "avg_order_value",
+                "importance": "0.0332"
+            },
+            {
+                "feature": "avg_rating_given",
+                "importance": "0.0299"
+            },
+            {
+                "feature": "customer_segment",
+                "importance": "0.0296"
+            }
+        ],
+        "labelling": null
+    },
+    "growth_model": {
+        "RMSE": 24480.48,
+        "MAE": 22518.88,
+        "MAPE_pct": 1.78,
+        "R2": 0.886,
+        "target": "revenue_3m_forecast (absolute $)",
+        "train_months": 20,
+        "test_months": 4,
+        "features_used": 11,
+        "forecast_horizon_months": 6,
+        "forecast": [
+            {
+                "period": "2024-01",
+                "forecast": 1244215.5
+            },
+            {
+                "period": "2024-02",
+                "forecast": 1212873.0
+            },
+            {
+                "period": "2024-03",
+                "forecast": 1220882.25
+            },
+            {
+                "period": "2024-04",
+                "forecast": 1227085.75
+            },
+            {
+                "period": "2024-05",
+                "forecast": 1221997.0
+            },
+            {
+                "period": "2024-06",
+                "forecast": 1239808.25
+            }
+        ],
+        "12_month_forecast": [
+            {
+                "period": "2024-01",
+                "forecast": 1244215.5
+            },
+            {
+                "period": "2024-02",
+                "forecast": 1212873.0
+            },
+            {
+                "period": "2024-03",
+                "forecast": 1220882.25
+            },
+            {
+                "period": "2024-04",
+                "forecast": 1227085.75
+            },
+            {
+                "period": "2024-05",
+                "forecast": 1221997.0
+            },
+            {
+                "period": "2024-06",
+                "forecast": 1239808.25
+            }
+        ],
+        "top_features": [
+            {
+                "feature": "new_customers",
+                "importance": "0.4828"
+            },
+            {
+                "feature": "monthly_orders",
+                "importance": "0.1266"
+            },
+            {
+                "feature": "month_num",
+                "importance": "0.1134"
+            },
+            {
+                "feature": "sin_m",
+                "importance": "0.0943"
+            },
+            {
+                "feature": "lag_1_rev",
+                "importance": "0.0623"
+            },
+            {
+                "feature": "lag_3_rev",
+                "importance": "0.0513"
+            },
+            {
+                "feature": "avg_order_value",
+                "importance": "0.029"
+            },
+            {
+                "feature": "cos_m",
+                "importance": "0.027"
+            },
+            {
+                "feature": "lag_12_rev",
+                "importance": "0.0072"
+            },
+            {
+                "feature": "lag_2_rev",
+                "importance": "0.0057"
+            }
+        ],
+        "data_profile": null
+    }
+}

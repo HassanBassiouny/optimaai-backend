@@ -1,0 +1,34 @@
+{
+  "strategy": "acceptable",
+  "confidence": "high",
+  "definition": "This dataset spans 729 days (2022-01-01 to 2023-12-31) with 50,000 transactions and $30,586,355 total revenue. Order sizes have a coefficient of variation of 0.87, meaning per-transaction predictions are naturally noisy. The model is best used at the 'monthly' aggregation grain for executive reporting; per-row predictions remain valid for relative ranking but should not be quoted as absolute order values.",
+  "suitable_for": [
+    "Monthly aggregate revenue forecasting (use the aggregator helper)",
+    "Identifying revenue drivers via feature importance",
+    "Detecting seasonality and trend changes over time"
+  ],
+  "not_suitable_for": [
+    "Quoting individual order values precisely (CoV=0.87 \u2192 noisy at row level)",
+    "Forecasting categories or regions absent from the training data"
+  ],
+  "data_span_days": 729,
+  "first_date": "2022-01-01",
+  "last_date": "2023-12-31",
+  "total_transactions": 50000,
+  "total_revenue": 30586355.44,
+  "days_with_data": 730,
+  "coverage_pct": 100.0,
+  "avg_transactions_per_day": 68.49,
+  "avg_revenue_per_day": 41899.12,
+  "transaction_p10": 63.81,
+  "transaction_p50": 445.5,
+  "transaction_p90": 1409.96,
+  "transaction_p99": 2127.4,
+  "transaction_max": 2499.55,
+  "coefficient_of_variation": 0.8672,
+  "recommended_aggregation": "monthly",
+  "monthly_periods_available": 24,
+  "weekly_periods_available": 105,
+  "train_test_split_ratio": 0.8,
+  "warnings": []
+}

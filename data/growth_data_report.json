@@ -1,0 +1,30 @@
+{
+  "strategy": "full_forecasting",
+  "confidence": "medium",
+  "definition": "This dataset has 24 months of history (2022-01 to 2023-12), enough for full forecasting with year-over-year comparisons. Recommended split: 20 months for training, 4 for test. Forecasts up to 6 months ahead are defensible; beyond that the model would be extrapolating.",
+  "suitable_for": [
+    "Forecasting up to 6 months ahead",
+    "Year-over-year growth claims",
+    "Seasonal pattern identification",
+    "Budget and capacity planning conversations"
+  ],
+  "not_suitable_for": [
+    "Forecasts beyond 6 months (extrapolation, not prediction)",
+    "Hiring or contract commitments without human review"
+  ],
+  "months_of_history": 24,
+  "months_with_revenue": 24,
+  "months_zero_or_missing": 0,
+  "first_period": "2022-01",
+  "last_period": "2023-12",
+  "total_revenue": 30586355.44,
+  "median_monthly_revenue": 1270712.54,
+  "min_monthly_revenue": 1152602.69,
+  "max_monthly_revenue": 1363968.22,
+  "has_full_seasonal_cycle": true,
+  "has_yoy_capability": true,
+  "safe_horizon_months": 6,
+  "recommended_train_months": 20,
+  "recommended_test_months": 4,
+  "warnings": []
+}
