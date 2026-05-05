@@ -1,0 +1,27 @@
+{
+    "version": "20260425_144328",
+    "trainer_version": "v3",
+    "trained_at": "2026-04-25T14:43:30.225646",
+    "data_files": {
+        "revenue": "D:\\OptimaAI\\optimaai-backend\\ml\\..\\data\\amazon_revenue_forecasting.csv",
+        "churn": "D:\\OptimaAI\\optimaai-backend\\ml\\..\\data\\amazon_churn_prediction.csv",
+        "growth": "D:\\OptimaAI\\optimaai-backend\\ml\\..\\data\\amazon_growth_projection.csv"
+    },
+    "models": [
+        "revenue_model",
+        "churn_model",
+        "growth_model"
+    ],
+    "improvements": [
+        "dedicated_datasets_per_model",
+        "net_revenue_target_with_refunds",
+        "real_churn_labels_90day_window",
+        "growth_uses_3m_forward_revenue",
+        "iterative_lag_feedback_forecast_fixed",
+        "prophet_iqr_outlier_clipping",
+        "seasonal_index_feature",
+        "gross_margin_pct_feature",
+        "clv_and_rfm_churn_features",
+        "removed_data_leakage_from_churn"
+    ]
+}
