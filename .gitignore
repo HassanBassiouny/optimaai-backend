@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtualenv
+venv/
+.venv/
+env/
+
+# Secrets
+.env
+.env.local
+*.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# OptimaAI
+knowledge_base/chroma/
+cleaned_dataset_*.csv
+cleaned_dataset_*_report.json
+*.log
+ml/artifacts/
+uploads/
+pgdata/
+
+# Generated data + artefacts
+data/*.csv
+data/*.xlsx
+data/*.json
+optimaai_artefacts/
+optimaai_reports/

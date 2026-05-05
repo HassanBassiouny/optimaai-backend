@@ -1,0 +1,51 @@
+# ══════════════════════════════════════════════════════════════════
+#  OPTIMAAI — BACKEND REQUIREMENTS
+#  Install: pip install -r requirements.txt
+# ══════════════════════════════════════════════════════════════════
+
+# ── Web framework ──────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+python-multipart
+
+# ── Database ───────────────────────────────────────────────────────
+sqlalchemy
+psycopg2-binary
+alembic
+
+# ── Cache ──────────────────────────────────────────────────────────
+redis
+
+# ── ML / Data science ──────────────────────────────────────────────
+pandas
+numpy
+scikit-learn
+xgboost
+prophet
+joblib
+openpyxl
+scipy
+
+# ── LLM / LangChain ────────────────────────────────────────────────
+langchain
+langchain-openai
+langchain-core
+langchain-community
+python-dotenv
+
+# ── RAG / Knowledge base ───────────────────────────────────────────
+chromadb
+sentence-transformers
+pypdf
+
+# ── Preprocessing pipeline ─────────────────────────────────────────
+# (all already covered by pandas / numpy / scikit-learn above)
+
+# ── Utilities ──────────────────────────────────────────────────────
+pydantic
+httpx
+python-jose[cryptography]
+passlib[bcrypt]
+
+python-docx>=1.1.0
+reportlab>=4.0.0

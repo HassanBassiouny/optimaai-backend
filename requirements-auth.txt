@@ -1,0 +1,25 @@
+# Add these to your existing requirements.txt (if not already there)
+# pip install -r requirements-auth.txt
+
+# ── Auth layer (new) ──────────────────────────────────────
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+python-multipart==0.0.9
+email-validator==2.2.0
+
+# ── Already in your stack (listing for reference) ─────────
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+sqlalchemy==2.0.35
+psycopg2-binary==2.9.9
+redis==5.0.8
+python-dotenv==1.0.1
+pydantic==2.9.2
+
+# ── RAG + ML (already in your stack) ──────────────────────
+chromadb==0.5.23
+sentence-transformers==3.0.1
+langchain-openai==0.2.0
+langchain-core==0.3.0
+pypdf==5.0.1
+pandas==2.2.3
