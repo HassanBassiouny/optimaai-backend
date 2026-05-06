@@ -49,3 +49,9 @@ passlib[bcrypt]
 
 python-docx>=1.1.0
 reportlab>=4.0.0
+
+# ── Odoo integration ───────────────────────────────────────────────
+# The connector uses xmlrpc.client from the Python stdlib — no extra
+# dependency needed. Listed here only for the optional Celery scheduler
+# that runs nightly_odoo_sync (see app/tasks/odoo_tasks.py).
+celery[redis]>=5.3.4
