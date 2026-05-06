@@ -21,6 +21,7 @@ from app.routes.mapping_routes    import router as mapping_router
 from app.routes.reports_routes    import router as reports_router
 from app.routes.calibrate_routes  import router as calibrate_router
 from app.routes.bmc_routes        import router as bmc_router
+from app.routes.odoo_routes       import router as odoo_router
 
 load_dotenv()
 
@@ -35,8 +36,8 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="OptimaAi API",
-    description="ML-powered business analytics backend (auth + ML + RAG + BMC + mapping).",
-    version="1.1.0",
+    description="ML-powered business analytics backend (auth + ML + RAG + BMC + mapping + Odoo).",
+    version="1.2.0",
     lifespan=lifespan,
 )
 
@@ -63,6 +64,7 @@ app.include_router(mapping_router)
 app.include_router(reports_router)
 app.include_router(calibrate_router)
 app.include_router(bmc_router)
+app.include_router(odoo_router)
 
 @app.get("/")
 def root():
