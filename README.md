@@ -23,8 +23,6 @@ AI-powered business intelligence API for SMEs. Delivers real-time revenue foreca
 
 OptimaAi combines machine learning and large language models to give business users (Sales Managers, Finance Controllers, Executives) actionable intelligence from their ERP data.
 
-## Documentation
-Full platform docs: [optima-ai-documentation.vercel.app](https://optima-ai-documentation.vercel.app)
 
 **Core capabilities:**
 
@@ -37,6 +35,10 @@ Full platform docs: [optima-ai-documentation.vercel.app](https://optima-ai-docum
 
 ---
 
+## Documentation
+Full platform docs: [optima-ai-documentation.vercel.app](https://optima-ai-documentation.vercel.app)
+
+---
 ## Tech Stack
 
 | Layer | Technology |
